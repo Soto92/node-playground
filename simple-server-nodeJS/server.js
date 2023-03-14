@@ -1,7 +1,30 @@
 const http = require("http");
+const { faker } = require("@faker-js/faker");
 
 const host = "localhost";
 const port = 8000;
+
+const getUsers = function (qtd) {
+  const users = [];
+  for (let i = 0; i < qtd; i++) {
+    const user = {
+      _id: faker.datatype.uuid(),
+      avatar: faker.image.avatar(),
+      birthday: faker.date.birthdate(),
+      email: faker.internet.email(),
+      firstName: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      sex: faker.name.sexType(),
+      subscriptionTier: faker.helpers.arrayElement([
+        "free",
+        "basic",
+        "business",
+      ]),
+    };
+    users.push(user);
+  }
+  return JSON.stringify({ users }, null, 2);
+};
 
 const getQueries = function (req) {
   let q = req.url.split("?");
@@ -20,9 +43,14 @@ const getQueries = function (req) {
 
 const requestListener = function (req, res) {
   const queries = getQueries(req);
-  console.log(queries);
+  let result = "";
+  if (queries.qtd) {
+    console.log("IF");
+    result = getUsers(queries.qtd);
+  }
+  console.log(result);
   res.writeHead(200);
-  res.end("My first server!");
+  res.end(result);
 };
 
 const server = http.createServer(requestListener);
