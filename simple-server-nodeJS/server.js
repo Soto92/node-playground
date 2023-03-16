@@ -26,6 +26,18 @@ const getUsers = function (qtd) {
   return JSON.stringify({ users }, null, 2);
 };
 
+const getAnimals = function (qtd) {
+  const animals = [];
+  for (let i = 0; i < qtd; i++) {
+    const animal = {
+      name: faker.name.firstName(),
+      animal: faker.animal.type(),
+    };
+    animals.push(animal);
+  }
+  return JSON.stringify({ animals }, null, 2);
+};
+
 const getQueries = function (req) {
   let q = req.url.split("?");
   result = {};
@@ -45,10 +57,13 @@ const requestListener = function (req, res) {
   const queries = getQueries(req);
   let result = "";
   if (queries.qtd) {
-    console.log("IF");
-    result = getUsers(queries.qtd);
+    if (queries.type === "animal") {
+      result = getAnimals(queries.qtd);
+    } else {
+      result = getUsers(queries.qtd);
+    }
   }
-  console.log(result);
+
   res.writeHead(200);
   res.end(result);
 };

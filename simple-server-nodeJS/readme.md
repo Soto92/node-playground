@@ -16,6 +16,10 @@ eg.: http://localhost:8000/get?type=person&qtd=9
 
 It should return 9 fake people
 
+or http://localhost:8000/get?type=animals&qtd=4
+
+It should return 4 fake animals
+
 ## Useful links
 
 - [Faker.js](https://fakerjs.dev/)
