@@ -36,26 +36,26 @@ obs. I am a devOps layman and this is the first time I do this.
 
 1 - The first thing I did was to choose the host, among several I chose [Vultr](https://www.vultr.com/).
 
-![img1](/images/01.png)
+![img1](/simple-server-nodeJS/images/01.png)
 
 They offer $250 for use, which is even too much for a simple study application.
 
 2 - I created a machine with the minimum requirements and Ubuntu system.
 
-![img2](/node-playground/simple-server-nodeJS/images/02.png)
+![img2](/simple-server-nodeJS/images/02.png)
 
-![img3](/node-playground/simple-server-nodeJS/images/03.png)
+![img3](/simple-server-nodeJS/images/03.png)
 
 3 - Then I configured the Firewall.
 Because the Vultr Firewall does not accept external connections, so I added the http, https and ssh protocols.
 
-![img4](/node-playground/simple-server-nodeJS/images/04.png)
+![img4](/simple-server-nodeJS/images/04.png)
 
 4 - As I had added the ssh protocol, I decided to connect to the running server through my local terminal
 
-![img5](/node-playground/simple-server-nodeJS/images/05.png)
+![img5](/simple-server-nodeJS/images/05.png)
 
-![img6](/node-playground/simple-server-nodeJS/images/06.png)
+![img6](/simple-server-nodeJS/images/06.png)
 
 5 - Firewall Troubleshooting (extra step)
 
@@ -88,7 +88,7 @@ Check status again:
 sudo ufw status
 ```
 
-![img9](/node-playground/simple-server-nodeJS/images/09.png)
+![img9](/simple-server-nodeJS/images/09.png)
 
 6 - Clone the Git project
 
@@ -100,7 +100,7 @@ git clone https://github.com/Soto92/node-playground.git
 
 Check with ls command
 
-![img10](/node-playground/simple-server-nodeJS/images/10.png)
+![img10](/simple-server-nodeJS/images/10.png)
 
 Navigate to simple-server-nodeJS and run
 
@@ -114,11 +114,11 @@ npm start
 
 You must see this:
 
-![img11](/node-playground/simple-server-nodeJS/images/11.png)
+![img11](/simple-server-nodeJS/images/11.png)
 
 and test it in your postman:
 
-![img12](/node-playground/simple-server-nodeJS/images/12.png)
+![img12](/simple-server-nodeJS/images/12.png)
 
 ## Extra notes
 
