@@ -2,7 +2,7 @@ import http from "http";
 import { getQueries, getUsers, getAnimals } from "./utils.js";
 
 const host = "localhost";
-const port = 8000;
+const port = 80;
 
 const requestListener = function (req, res) {
   const queries = getQueries(req);
