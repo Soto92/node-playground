@@ -36,7 +36,7 @@ obs. I am a devOps layman and this is the first time I do this.
 
 1 - The first thing I did was to choose the host, among several I chose [Vultr](https://www.vultr.com/).
 
-![img1](/node-playground/simple-server-nodeJS/images/01.png)
+![img1](/images/01.png)
 
 They offer $250 for use, which is even too much for a simple study application.
 
